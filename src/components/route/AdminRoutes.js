@@ -7,7 +7,7 @@ import Spinner from "../Spinner"
 export default function AdminRoute() {
   const [ok, setOk] = useState(false)
   const [auth, setAuth] = useAuth()
-  const privateApi = "http://localhost:8080/api/v1/auth/admin-auth"
+  const privateApi = "http://139.59.14.25/api/v1/auth/admin-auth"
 
   useEffect(() => {
     const authCheck = async () => {

@@ -21,7 +21,7 @@ function EditContentType() {
       } else {
         // Fetch the genre data from the API
         const response = await axios.get(
-          `http://localhost:8080/api/v1/category/single-contenttype/${slug}`
+          `http://139.59.14.25/api/v1/category/single-contenttype/${slug}`
         )
         const genreData = response.data
         setGenreName(genreData.contenttype)
@@ -40,7 +40,7 @@ function EditContentType() {
     e.preventDefault()
     try {
       const { data } = await axios.put(
-        `http://localhost:8080/api/v1/content-type/update-contenttype/${slug}`,
+        `http://139.59.14.25/api/v1/content-type/update-contenttype/${slug}`,
         { contenttype: genreName }
       )
       if (data.success) {

@@ -44,7 +44,7 @@ function AddGenre() {
         }
       },
     })
-  const api = "http://localhost:8080/api/v1/category/create-category"
+  const api = "http://139.59.14.25/api/v1/category/create-category"
   return (
     <Layout className="text-3xl">
       <div className=" ">

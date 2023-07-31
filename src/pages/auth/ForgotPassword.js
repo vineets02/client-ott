@@ -5,7 +5,7 @@ import Button from "../../components/Button"
 import styles from "./Login.module.css"
 import axios from "axios"
 
-const api = "http://localhost:8080/api/v1/auth/forgot-password"
+const api = "http://139.59.14.25/api/v1/auth/forgot-password"
 function ForgotPassword() {
   const navigate = useNavigate()
 

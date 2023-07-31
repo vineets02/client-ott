@@ -91,7 +91,7 @@ function MovieDetails() {
         } else {
           // Fetch the genre data from the API
           const response = await axios.get(
-            `http://localhost:8080/api/v1/movie/get-movie/${slug}`
+            `http://139.59.14.25/api/v1/movie/get-movie/${slug}`
           )
           const genreDatas = response.data.data
           console.log("genreData======", genreDatas)
@@ -279,7 +279,7 @@ function MovieDetails() {
             /> */}
             {/* <FullScreen> */}
             <ReactPlayer
-              url={`http://localhost:8080/api/v1/movie/movie-video/${movieDetails._id}`}
+              url={`http://139.59.14.25/api/v1/movie/movie-video/${movieDetails._id}`}
               // light={
               // true
               // <img

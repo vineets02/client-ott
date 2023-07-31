@@ -24,7 +24,7 @@ function EditGenre() {
       } else {
         // Fetch the genre data from the API
         const response = await axios.get(
-          `http://localhost:8080/api/v1/category/single-category/${slug}`
+          `http://139.59.14.25/api/v1/category/single-category/${slug}`
         )
         const genreData = response.data
         console.log(genreData.name)
@@ -44,7 +44,7 @@ function EditGenre() {
     e.preventDefault()
     try {
       const { data } = await axios.put(
-        `http://localhost:8080/api/v1/category/update-category/${params.slug}`,
+        `http://139.59.14.25/api/v1/category/update-category/${params.slug}`,
         { name: genreName }
       )
       if (data.success) {

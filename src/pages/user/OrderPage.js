@@ -27,7 +27,7 @@ function OrderPage() {
   const getOrders = async () => {
     try {
       const { data } = await axios.get(
-        "https://tmp-h86h.onrender.com/api/v1/auth/orders/"
+        "http://139.59.14.25/api/v1/auth/orders/"
       )
       console.log("data", data)
       setMovie(data)

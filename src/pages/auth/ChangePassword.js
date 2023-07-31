@@ -6,7 +6,7 @@ import styles from "./Login.module.css"
 import axios from "axios"
 import { useAuth } from "../../context/auth"
 
-const api = "http://localhost:8080/api/v1/auth/change-password"
+const api = "http://139.59.14.25/api/v1/auth/change-password"
 function ChangePassword() {
   const navigate = useNavigate()
   const [auth, setAuth] = useAuth()

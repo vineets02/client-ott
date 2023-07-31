@@ -31,7 +31,7 @@ function Banner() {
   const getAllBanner = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/movie/get-movie"
+        "http://139.59.14.25/api/v1/movie/get-movie"
       )
       const allMovies = data.movies // Assuming the movies are returned in an array
       console.log("allMovies", allMovies)
@@ -107,7 +107,7 @@ function Banner() {
             className="banner"
             style={{
               backgroundSize: "cover",
-              backgroundImage: `url(http://localhost:8080/api/v1/movie/movie-photo/${banner._id})`,
+              backgroundImage: `url(http://139.59.14.25/api/v1/movie/movie-photo/${banner._id})`,
               backgroundPosition: "center center",
             }}
           >
@@ -194,7 +194,7 @@ function Banner() {
       >
         <div className="bg-[#121212]">
           <ReactPlayer
-            url={`http://localhost:8080/api/v1/movie/movie-trailer/${banner._id}`}
+            url={`http://139.59.14.25/api/v1/movie/movie-trailer/${banner._id}`}
             // light={
             // true
             // <img

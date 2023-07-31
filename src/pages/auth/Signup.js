@@ -48,7 +48,7 @@ function Signup() {
       },
     })
 
-  const api = "http://localhost:8080/api/v1/auth/register"
+  const api = "http://139.59.14.25/api/v1/auth/register"
 
   // const handleSignupSubmit = async (e) => {
   //   e.preventDefault()

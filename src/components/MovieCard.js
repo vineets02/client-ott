@@ -81,7 +81,7 @@ const MovieCard = ({ movie }) => {
         onMouseLeave={handleMouseLeave}
       >
         <HoverVideoPlayer
-          videoSrc={`https://tmp-h86h.onrender.com/api/v1/movie/movie-trailer/${movie._id}`}
+          videoSrc={`http://139.59.14.25/api/v1/movie/movie-trailer/${movie._id}`}
           volume={1}
           controls
           loop
@@ -116,7 +116,7 @@ const MovieCard = ({ movie }) => {
           }
           pausedOverlay={
             <img
-              src={`https://tmp-h86h.onrender.com/api/v1/movie/movie-photo/${movie._id}`}
+              src={`http://139.59.14.25/api/v1/movie/movie-photo/${movie._id}`}
               alt={movie.title}
               className="rounded-sm object-fill md:rounded bg-black"
               style={{

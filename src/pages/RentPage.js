@@ -89,7 +89,7 @@ function RentPage() {
       handler: function (response) {
         console.log(response, "86")
         axios
-          .post("http://localhost:8080/verify", {
+          .post("http://139.59.14.25/verify", {
             response: response,
           })
           .then((res) => {
@@ -97,7 +97,7 @@ function RentPage() {
             localStorage.removeItem("rent")
             setRent([])
             axios
-              .put("http://localhost:8080/", {
+              .put("http://139.59.14.25/", {
                 userId: auth.user._id,
                 subscription: true,
               })
@@ -124,7 +124,7 @@ function RentPage() {
   const handlePay = async (price, title, movie) => {
     const _data = { amount: price }
     axios
-      .post("http://localhost:8080/orders", _data)
+      .post("http://139.59.14.25/orders", _data)
       .then((res) => {
         console.log(res.data, "72")
         handleOpenRazorpay(res.data.data, title, movie)
@@ -156,7 +156,7 @@ function RentPage() {
                 {/* <MovieCard key={index} movie={movie} /> */}
                 <div className="w-1/2">
                   <img
-                    src={`https://tmp-h86h.onrender.com/api/v1/movie/movie-photo/${movie._id}`}
+                    src={`http://139.59.14.25/api/v1/movie/movie-photo/${movie._id}`}
                     className="banner mx-3 "
                     style={{
                       width: "90%",

@@ -6,9 +6,8 @@ import Sidebar from "../../../components/layout/Sidebar"
 import axios from "axios"
 import Swal from "sweetalert2"
 
-const getGenres = "http://localhost:8080/api/v1/category/get-category"
-const getContenttype =
-  "http://localhost:8080/api/v1/content-type/get-contenttype"
+const getGenres = "http://139.59.14.25/api/v1/category/get-category"
+const getContenttype = "http://139.59.14.25/api/v1/content-type/get-contenttype"
 function AddMovies() {
   const navigate = useNavigate()
   const [value, setValue] = useState("")
@@ -114,7 +113,7 @@ function AddMovies() {
       productData.append("contenttype", contenttype)
 
       const { data } = await axios.post(
-        "http://localhost:8080/api/v1/movie/create-movie",
+        "http://139.59.14.25/api/v1/movie/create-movie",
         productData
       )
 

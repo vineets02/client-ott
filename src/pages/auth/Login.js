@@ -9,7 +9,7 @@ import { useAuth } from "../../context/auth"
 // import background from "../../../public/assets/background.png"
 // import image from "../../../assets/background.png"
 
-const api = "http://localhost:8080/api/v1/auth/login"
+const api = "http://139.59.14.25/api/v1/auth/login"
 
 function Login() {
   const navigate = useNavigate()

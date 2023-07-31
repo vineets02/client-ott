@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"
 import Sidebar from "../../components/layout/Sidebar"
 import axios from "axios"
 
-const getGenres = "http://localhost:8080/api/v1/content-type/get-contenttype"
+const getGenres = "http://139.59.14.25/api/v1/content-type/get-contenttype"
 
 function ContentType() {
   // const auth = useAuth()
@@ -21,7 +21,7 @@ function ContentType() {
   const HandleDelete = async (pId) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:8080/api/v1/content-type/delete-contenttype/${pId}`
+        `http://139.59.14.25/api/v1/content-type/delete-contenttype/${pId}`
       )
       if (data.success) {
         alert(`content type is deleted`)

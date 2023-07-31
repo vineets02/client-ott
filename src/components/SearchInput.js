@@ -13,7 +13,7 @@ function SearchInput() {
     e.preventDefault()
     try {
       const { data } = await axios.get(
-        `https://tmp-h86h.onrender.com/api/v1/movie/search/${values.keyword}`
+        `http://139.59.14.25/api/v1/movie/search/${values.keyword}`
       )
       setValues({ ...values, results: data })
 

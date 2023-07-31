@@ -23,7 +23,7 @@ function Dashboard() {
   const handleSubscriptionToggle = async () => {
     try {
       const response = await axios.put(
-        `https://tmp-h86h.onrender.com/api/v1/auth/${auth.user._id}/subscription`
+        `http://139.59.14.25/api/v1/auth/${auth.user._id}/subscription`
       )
       const { success, message } = response.data
 

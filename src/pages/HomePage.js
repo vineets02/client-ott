@@ -53,7 +53,7 @@ function HomePage() {
   const getAllMovies = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/movie/get-movie"
+        "http://139.59.14.25/api/v1/movie/get-movie"
       )
       setMovies(data.movies)
       setLoading(false)

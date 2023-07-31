@@ -6,7 +6,7 @@ function Thumbnail() {
   const getAllBanner = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:8080/api/v1/movie/get-movie"
+        "http://139.59.14.25/api/v1/movie/get-movie"
       )
       const allMovies = data.movies // Assuming the movies are returned in an array
       console.log("allMovies thumb", allMovies)
@@ -46,7 +46,7 @@ function Thumbnail() {
         <p className="text-white mb-100">{movies.title}</p>
 
         <img
-          src={`http://localhost:8080/api/v1/movie/movie-photo/${movies._id}`}
+          src={`http://139.59.14.25/api/v1/movie/movie-photo/${movies._id}`}
           className="rounded-sm object-cover md:rounded"
           layout="fill"
         />

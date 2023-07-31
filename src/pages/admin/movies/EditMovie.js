@@ -5,9 +5,8 @@ import Sidebar from "../../../components/layout/Sidebar"
 import { useLocation, useNavigate, useParams } from "react-router-dom"
 import axios from "axios"
 
-const getGenres = "http://localhost:8080/api/v1/category/get-category"
-const getContenttype =
-  "http://localhost:8080/api/v1/content-type/get-contenttype"
+const getGenres = "http://139.59.14.25/api/v1/category/get-category"
+const getContenttype = "http://139.59.14.25/api/v1/content-type/get-contenttype"
 
 function EditMovie() {
   const navigate = useNavigate()
@@ -96,7 +95,7 @@ function EditMovie() {
         // setGenreName(genreData.name)
       } else {
         const { data } = await axios.get(
-          `http://localhost:8080/api/v1/movie/get-movie/${params.slug}`
+          `http://139.59.14.25/api/v1/movie/get-movie/${params.slug}`
         )
         console.log("data", data.data)
         setTitle(data.data.title)
@@ -131,7 +130,7 @@ function EditMovie() {
       productData.append("category", category)
       productData.append("contenttype", contenttype)
       const { data } = await axios.put(
-        `http://localhost:8080/api/v1/movie/update-movie/${id}`,
+        `http://139.59.14.25/api/v1/movie/update-movie/${id}`,
         productData
       )
       if (data?.success) {

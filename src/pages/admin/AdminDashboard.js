@@ -33,8 +33,8 @@ chartJS.register(
   Filler
 )
 
-const getMovie = "http://localhost:8080/api/v1/movie/get-movie"
-const getUsers = "http://localhost:8080/api/v1/auth/users"
+const getMovie = "http://139.59.14.25/api/v1/movie/get-movie"
+const getUsers = "http://139.59.14.25/api/v1/auth/users"
 function AdminDashboard() {
   const [auth] = useAuth()
   const [totalMovies, setTotalMovies] = useState(0) // State for total movie count
@@ -48,7 +48,7 @@ function AdminDashboard() {
     const fetchGraph = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/v1/auth/all-orders/"
+          "http://139.59.14.25/api/v1/auth/all-orders/"
         )
         const data = response.data
         console.log("fetchGraph", data)
@@ -111,10 +111,10 @@ function AdminDashboard() {
       setLoading(true)
 
       const categoryResponse = await axios.get(
-        "http://localhost:8080/api/v1/category/get-category"
+        "http://139.59.14.25/api/v1/category/get-category"
       )
       const productResponse = await axios.get(
-        "http://localhost:8080/api/v1/movie/get-movie"
+        "http://139.59.14.25/api/v1/movie/get-movie"
       )
       const categories = categoryResponse.data.category
       const movies = productResponse.data.movies

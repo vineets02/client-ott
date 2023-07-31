@@ -34,7 +34,7 @@ function AddContentType() {
         }
       },
     })
-  const api = "http://localhost:8080/api/v1/content-type/create-contenttype"
+  const api = "http://139.59.14.25/api/v1/content-type/create-contenttype"
   return (
     <Layout className="text-3xl">
       <div className=" ">

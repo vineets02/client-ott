@@ -27,7 +27,7 @@ const NewCard = ({ movie }) => {
     <div className="mx-auto">
       <div className=" z-50 min-w-[150px]cursor-pointer transition duration-200 ease-out h-44 xs:hover:scale-110 md:hover:scale-125 lg:hover:scale-125 lg:hover:screen-gray-800">
         <img
-          src={`http://localhost:8080/api/v1/movie/movie-photo/${movie._id}`}
+          src={`http://139.59.14.25/api/v1/movie/movie-photo/${movie._id}`}
           alt={movie.title}
           className=" rounded-lg  my-5 md:rounded bg-black"
           style={{

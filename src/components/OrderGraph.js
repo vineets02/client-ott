@@ -9,7 +9,7 @@ const OrderGraph = () => {
     const fetchData = async () => {
       try {
         const { data } = await fetch(
-          "https://tmp-h86h.onrender.com/api/v1/auth/get-orders/"
+          "http://139.59.14.25/api/v1/auth/get-orders/"
         ) // Replace with your API endpoint
         // const orders = await response.jso
         // n()

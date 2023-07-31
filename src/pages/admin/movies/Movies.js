@@ -8,7 +8,7 @@ import axios from "axios"
 import {} from "react-hover-video-player"
 import HoverVideoPlayer from "react-hover-video-player"
 import Swal from "sweetalert2"
-const getMovie = "http://localhost:8080/api/v1/movie/get-movie"
+const getMovie = "http://139.59.14.25/api/v1/movie/get-movie"
 
 function Movies() {
   const auth = useAuth()
@@ -54,7 +54,7 @@ function Movies() {
     if (confirmDelete.isConfirmed) {
       try {
         const { data } = await axios.delete(
-          `http://localhost:8080/api/v1/movie/delete-movie/${id}`
+          `http://139.59.14.25/api/v1/movie/delete-movie/${id}`
         )
         if (data.success) {
           Swal.fire({
@@ -203,7 +203,7 @@ function Movies() {
                           </td>
                           <td className="whitespace-nowrap font-medium py-2 text-gray-900 dark:text-white">
                             <img
-                              src={`http://localhost:8080/api/v1/movie/movie-photo/${c._id}`}
+                              src={`http://139.59.14.25/api/v1/movie/movie-photo/${c._id}`}
                               alt={c.title}
                               width={100}
                               height={100}
@@ -211,11 +211,11 @@ function Movies() {
                           </td>
                           <td className="whitespace-nowrap font-medium py-2 text-gray-900 dark:text-white">
                             <HoverVideoPlayer
-                              videoSrc={`http://localhost:8080/api/v1/movie/movie-trailer/${c._id}`}
+                              videoSrc={`http://139.59.14.25/api/v1/movie/movie-trailer/${c._id}`}
                               controls
                               pausedOverlay={
                                 <img
-                                  src={`http://localhost:8080/api/v1/movie/movie-photo/${c._id}`}
+                                  src={`http://139.59.14.25/api/v1/movie/movie-photo/${c._id}`}
                                   alt=""
                                   style={{
                                     // Make the image expand to cover the video's dimensions
@@ -234,11 +234,11 @@ function Movies() {
                           </td>
                           <td className="whitespace-nowrap font-medium py-2 text-gray-900 dark:text-white">
                             <HoverVideoPlayer
-                              videoSrc={`http://localhost:8080/api/v1/movie/movie-video/${c._id}`}
+                              videoSrc={`http://139.59.14.25/api/v1/movie/movie-video/${c._id}`}
                               controls
                               pausedOverlay={
                                 <img
-                                  src={`http://localhost:8080/api/v1/movie/movie-photo/${c._id}`}
+                                  src={`http://139.59.14.25/api/v1/movie/movie-photo/${c._id}`}
                                   alt=""
                                   style={{
                                     // Make the image expand to cover the video's dimensions
